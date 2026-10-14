@@ -14,3 +14,18 @@
 input[type="range"]::-webkit-slider-thumb {
   pointer-events: auto;
 }
+
+@keyframes menuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-menu-slide {
+  animation: menuSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

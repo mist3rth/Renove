@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Phone, ArrowRight, Menu, X, Home as HomeIcon } from 'lucide-react';
 import { companyInfo } from '../data/roofingData';
 
@@ -9,6 +9,16 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [mobileMenuOpen]);
 
   const handleLinkClick = (anchorId: string) => {
     setMobileMenuOpen(false);
@@ -129,69 +139,79 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer (Superposition absolue pour ne JAMAIS pousser le contenu de la page) */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-[#ece6de] bg-[#fbf8f5] px-[30px] pt-3 pb-6 space-y-3 animate-fadeIn">
-          <nav className="flex flex-col space-y-2">
-            <button
-              onClick={() => handleLinkClick('services')}
-              className="text-left px-3 py-2 text-base font-medium text-[#18181b] rounded-lg hover:bg-[#ece6de] cursor-pointer"
-            >
-              Services
-            </button>
-            <button
-              onClick={() => handleLinkClick('why-us')}
-              className="text-left px-3 py-2 text-base font-medium text-[#18181b] rounded-lg hover:bg-[#ece6de] cursor-pointer"
-            >
-              Pourquoi nous
-            </button>
-            <button
-              onClick={() => handleLinkClick('process')}
-              className="text-left px-3 py-2 text-base font-medium text-[#18181b] rounded-lg hover:bg-[#ece6de] cursor-pointer"
-            >
-              Processus
-            </button>
-            <button
-              onClick={() => handleLinkClick('reviews')}
-              className="text-left px-3 py-2 text-base font-medium text-[#18181b] rounded-lg hover:bg-[#ece6de] cursor-pointer"
-            >
-              Avis clients
-            </button>
-            <button
-              onClick={() => handleLinkClick('localisation')}
-              className="text-left px-3 py-2 text-base font-medium text-[#c85a32] rounded-lg hover:bg-[#ece6de] cursor-pointer font-semibold"
-            >
-              Localisation & Carte
-            </button>
-            <button
-              onClick={() => handleLinkClick('faq')}
-              className="text-left px-3 py-2 text-base font-medium text-[#18181b] rounded-lg hover:bg-[#ece6de] cursor-pointer"
-            >
-              FAQ
-            </button>
-          </nav>
+        <>
+          {/* Backdrop semi-transparent pour fermer au clic externe */}
+          <div
+            onClick={() => setMobileMenuOpen(false)}
+            className="fixed inset-0 top-20 bg-black/25 backdrop-blur-[2px] z-30 lg:hidden"
+            aria-hidden="true"
+          />
 
-          <div className="pt-3 border-t border-[#ece6de] space-y-3">
-            <a
-              href={`tel:${companyInfo.phoneRaw}`}
-              className="flex items-center justify-between px-3 py-2 text-sm font-semibold text-[#18181b] bg-white rounded-lg border border-[#d6cfc7]"
-            >
-              <span>{companyInfo.phone} (Mérignac / Urgence)</span>
-              <Phone className="w-4 h-4 text-[#c85a32]" />
-            </a>
+          {/* Menu déroulant flottant au-dessus du contenu */}
+          <div className="lg:hidden absolute top-full left-0 right-0 w-full z-40 border-b border-[#ece6de] bg-[#fbf8f5] px-[30px] pt-3 pb-6 space-y-3 shadow-2xl animate-menu-slide max-h-[calc(100dvh-80px)] overflow-y-auto">
+            <nav className="flex flex-col space-y-2">
+              <button
+                onClick={() => handleLinkClick('services')}
+                className="text-left px-3 py-2 text-base font-medium text-[#18181b] rounded-lg hover:bg-[#ece6de] cursor-pointer"
+              >
+                Services
+              </button>
+              <button
+                onClick={() => handleLinkClick('why-us')}
+                className="text-left px-3 py-2 text-base font-medium text-[#18181b] rounded-lg hover:bg-[#ece6de] cursor-pointer"
+              >
+                Pourquoi nous
+              </button>
+              <button
+                onClick={() => handleLinkClick('process')}
+                className="text-left px-3 py-2 text-base font-medium text-[#18181b] rounded-lg hover:bg-[#ece6de] cursor-pointer"
+              >
+                Processus
+              </button>
+              <button
+                onClick={() => handleLinkClick('reviews')}
+                className="text-left px-3 py-2 text-base font-medium text-[#18181b] rounded-lg hover:bg-[#ece6de] cursor-pointer"
+              >
+                Avis clients
+              </button>
+              <button
+                onClick={() => handleLinkClick('localisation')}
+                className="text-left px-3 py-2 text-base font-medium text-[#c85a32] rounded-lg hover:bg-[#ece6de] cursor-pointer font-semibold"
+              >
+                Localisation & Carte
+              </button>
+              <button
+                onClick={() => handleLinkClick('faq')}
+                className="text-left px-3 py-2 text-base font-medium text-[#18181b] rounded-lg hover:bg-[#ece6de] cursor-pointer"
+              >
+                FAQ
+              </button>
+            </nav>
 
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onNavigate('contact');
-              }}
-              className="w-full py-2.5 px-4 rounded-xl text-sm font-semibold bg-[#c85a32] text-white flex items-center justify-center gap-2 hover:bg-[#b54f2a] cursor-pointer"
-            >
-              <span>Demander une inspection gratuite</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+            <div className="pt-3 border-t border-[#ece6de] space-y-3">
+              <a
+                href={`tel:${companyInfo.phoneRaw}`}
+                className="flex items-center justify-between px-3 py-2 text-sm font-semibold text-[#18181b] bg-white rounded-lg border border-[#d6cfc7]"
+              >
+                <span>{companyInfo.phone} (Mérignac / Urgence)</span>
+                <Phone className="w-4 h-4 text-[#c85a32]" />
+              </a>
+
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onNavigate('contact');
+                }}
+                className="w-full py-2.5 px-4 rounded-xl text-sm font-semibold bg-[#c85a32] text-white flex items-center justify-center gap-2 hover:bg-[#b54f2a] cursor-pointer"
+              >
+                <span>Demander une inspection gratuite</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );
