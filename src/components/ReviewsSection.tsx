@@ -46,13 +46,10 @@ export const ReviewsSection: React.FC = () => {
 
               {/* Author Info */}
               <div className="flex items-center gap-3.5 pt-4 border-t border-[#e4dfd7]/60">
-                <img
-                  src={review.avatar}
-                  alt={review.name}
-                  referrerPolicy="no-referrer"
-                  className="w-12 h-12 rounded-full object-cover border border-[#e4dfd7]"
-                  loading="lazy"
-                />
+                {/* Typographic Monogram Avatar */}
+                <div className="w-11 h-11 rounded-full bg-[#c85a32]/10 text-[#c85a32] font-semibold text-sm flex items-center justify-center border border-[#c85a32]/25 shrink-0 tracking-wide select-none">
+                  {review.initials}
+                </div>
                 <div>
                   <h4 className="text-base font-medium text-[#18181b]">
                     {review.name}

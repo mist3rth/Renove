@@ -1,16 +1,17 @@
-# Renove Toiture Gironde (Artisan Couvreur)
+# Renove Toiture Gironde (Site de Démonstration Portfolio)
 
-> Entreprise artisanale de référence en couverture, réfection, étanchéité et urgence toiture en Gironde (33).
+> Projet portfolio d'artisan couvreur zingueur à Mérignac et Bordeaux Métropole (Gironde 33). Entreprise et avis fictifs à des fins de démonstration technique et UI/UX.
 
-## Identité & Coordonnées Officielles
-- **Nom commercial :** Renove Toiture
-- **Activité :** Couverture, Zinguerie, Réparation de toiture, Sinistres météo & grêle, Détection de fuites.
-- **Siège & Dépôt :** 18 rue des Compagnons du Devoir, 33700 Mérignac, Nouvelle-Aquitaine, France.
-- **Téléphone fixe local :** 05 56 42 26 90
-- **Ligne d'urgence (fuite / bâchage) :** 06 14 28 92 10
-- **Email :** contact@renove-toiture.fr
-- **Horaires :** Lundi au Samedi de 07h30 à 19h00 (Intervention fuite d'urgence 24h/7j).
+## Identité & Coordonnées (Plages de Fiction ARCEP)
+- **Projet :** Renove Toiture (Démonstration portfolio)
+- **Activité :** Couverture, Zinguerie, Réfection, Sinistres météo & grêle, Détection de fuites.
+- **Localisation :** 18 rue des Compagnons du Devoir, 33700 Mérignac, Gironde, France.
+- **Téléphone fixe (Plage Fiction ARCEP) :** 05 36 49 12 34
+- **Ligne mobile urgence (Plage Fiction ARCEP) :** 06 99 00 12 34
+- **Email :** contact@renove-demo.fr
+- **Horaires :** Lundi au Samedi de 07h30 à 19h00 (Urgences fuites 24h/7j).
 - **Assurances :** Garantie Décennale 10 ans et Responsabilité Civile Professionnelle.
+- **Auteur :** Made by T.THIESSON (https://present-me-lake.vercel.app/)
 
 ## Services Proposés
 1. **Remplacement de toiture :** Rénovation intégrale de toitures anciennes, remplacement de tuiles canal, romanes, ardoises, bac acier et zinc avec isolation thermique sous toiture.
@@ -18,12 +19,12 @@
 3. **Dégâts d'intempéries & Grêle :** Bâchage rapide en urgence, mise en sécurité, devis détaillé et accompagnement complet auprès de l'assurance habitation.
 4. **Détection & Réparation de fuites :** Recherche hygrométrique et thermique d'infiltrations sans destruction, réparation de gouttières et descentes d'eaux pluviales.
 
-## Zone Géographique Desservie (Rayon de 45 km autour de Bordeaux)
+## Zone Géographique Desservie (Rayon de 35 km)
 - Mérignac, Bordeaux, Pessac, Talence, Bègles, Gradignan, Le Bouscat, Saint-Médard-en-Jalles.
-- Cenon, Floirac, Villenave-d'Ornon, Bruges, Eysines, Libourne, Bassin d'Arcachon.
+- Cenon, Floirac, Villenave-d'Ornon, Bruges, Eysines, Blanquefort, Cestas.
 
-## Engagements & Valeurs
+## Engagements & Chiffres Clés
 - Diagnostic et inspection sur site 100% gratuits et sans engagement.
-- Devis écrit, détaillé et transparent sous 48h.
-- Note moyenne certifiée : 4.9/5 sur plus de 2 800 toitures traitées.
-- Nettoyage quotidien et rigoureux de la zone de chantier.
+- Devis écrit, détaillé et transparent sous 48h (déplacement urgence sous 24h).
+- Plus de 850 chantiers et toitures réalisés en 15 ans d'expérience.
+- Note de satisfaction : 4.9/5.

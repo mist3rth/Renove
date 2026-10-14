@@ -1,8 +1,5 @@
 User-agent: *
-Allow: /
+Disallow: /
 
-# Sitemaps
-Sitemap: https://renove-toiture.fr/sitemap.xml
-
-# LLM indexing context
-# See https://renove-toiture.fr/llms.txt for quick AI reasoning
+# Site de démonstration / Portfolio - Entreprise fictive
+# Indexation désactivée (noindex, nofollow)

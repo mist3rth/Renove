@@ -44,10 +44,14 @@
 - [x] Attributs `aria-expanded`, `aria-label`, contrastes de couleurs WCAG AA.
 - [x] Optimisation LCP (`fetchPriority="high"`, WebP) et CLS (ratios d'aspect fixes).
 
-## Phase 6 : Finitions & Déploiement
-- [x] Compilation et génération statique validées (`npm run build`).
-- [x] Contrôle TypeScript strict validé (`npm run lint`).
-- [x] Autonomie et robustesse absolue de `AnimatedCounter` (double détection IntersectionObserver + triggers).
-- [x] Navigation synchronisée depuis la page formulaire vers les ancres de la page d'accueil avec `lenis.resize()`.
-- [x] Suppression de la scorie typographique sur le délai de devis (48h sans lignes vagues).
-- [x] Initialisation Git et déploiement sur le dépôt GitHub distant `https://github.com/mist3rth/Renove.git`.
+## Phase 7 : Conformité Légale, Fictivité ARCEP, Crédibilité & Crédit Auteur
+- [x] Désactivation de l'indexation : `noindex, nofollow` dans `index.html` et `Disallow: /` dans `robots.txt`.
+- [x] Bandeau sémantique d'avertissement portfolio / site de démonstration au sommet du site.
+- [x] Numéros de téléphone basculés sur les plages réservées à la fiction par l'ARCEP (`05 36 49 12 34` et `06 99 00 12 34`).
+- [x] Neutralisation des mentions légales sensibles : suppression de "SMA BTP" (remplacé par garantie décennale artisanale) et de "Google vérifiée" (remplacé par note de satisfaction client).
+- [x] Harmonisation des délais : devis détaillé sous 48h / astreinte urgence sous 24h.
+- [x] Harmonisation géographique : rayon de 35 km concentré sur Bordeaux Métropole et 15 communes voisines directes.
+- [x] Nombre de toitures ajusté de 2800 à 850+ pour une crédibilité artisanale optimale.
+- [x] Avis girondins avec monogrammes typographiques élégants (suppression des avatars IA générés).
+- [x] Alignement Open Graph, Twitter cards et canonical sur `https://renove.vercel.app/`.
+- [x] Ajout de la mention footer "Made by T.THIESSON" avec lien vers `https://present-me-lake.vercel.app/` et icône de sortie.

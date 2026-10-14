@@ -62,7 +62,7 @@ export const WhyUsSection: React.FC<WhyUsSectionProps> = ({ onOpenContact }) => 
     },
     {
       icon: Award,
-      title: "Couvert par notre garantie décennale écrite SMA BTP"
+      title: "Couvert par notre garantie décennale artisanale"
     }
   ];
 
@@ -144,7 +144,7 @@ export const WhyUsSection: React.FC<WhyUsSectionProps> = ({ onOpenContact }) => 
                   <div className="pr-4">
                     <div className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight tabular-nums">
                       <AnimatedCounter
-                        target={2800}
+                        target={850}
                         prefix="+"
                         duration={1600}
                         startTrigger={isVisible}

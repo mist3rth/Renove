@@ -24,7 +24,7 @@ export const LocalMapSection: React.FC<LocalMapSectionProps> = ({ onOpenContact 
             Votre couvreur de proximité en Gironde (33)
           </h2>
           <p className="text-base sm:text-lg text-[#52525b] leading-relaxed">
-            Basés à Mérignac, nos artisans interviennent rapidement dans toute la métropole bordelaise et jusqu'au Bassin d'Arcachon.
+            Basés à Mérignac, nos artisans interviennent rapidement dans toute la métropole bordelaise et les communes voisines dans un rayon de {companyInfo.serviceRadiusKm} km.
           </p>
         </div>
 

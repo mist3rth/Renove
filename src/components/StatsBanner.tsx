@@ -25,7 +25,7 @@ export const StatsBanner: React.FC = () => {
 
   const stats = [
     {
-      target: 2800,
+      target: 850,
       decimals: 0,
       suffix: '+',
       label: 'Toitures réalisées en Gironde'
@@ -40,7 +40,7 @@ export const StatsBanner: React.FC = () => {
       target: 4.9,
       decimals: 1,
       suffix: '',
-      label: 'Note Google vérifiée'
+      label: 'Note de satisfaction client'
     },
     {
       target: 24,

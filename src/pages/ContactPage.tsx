@@ -344,7 +344,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onBackToHome }) => {
                   <div className="flex items-start gap-3">
                     <ShieldCheck className="w-5 h-5 text-[#c85a32] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-[#18181b] block">Garantie décennale écrite SMA BTP</strong>
+                      <strong className="text-[#18181b] block">Garantie décennale artisanale</strong>
                       Couverture intégrale des travaux réalisés selon les normes DTU en vigueur.
                     </div>
                   </div>
@@ -352,7 +352,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onBackToHome }) => {
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-[#c85a32] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-[#18181b] block">Devis transmis en 24h ouvrées</strong>
+                      <strong className="text-[#18181b] block">Devis détaillé sous 48h ouvrées</strong>
                       Chiffrage clair, poste par poste, sans aucune ligne cachée.
                     </div>
                   </div>
@@ -378,7 +378,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onBackToHome }) => {
                   Le devis était clair, le rendez-vous a été pris en moins de 24h et les travaux ont été menés à la perfection.
                 </p>
                 <div className="text-xs font-bold text-[#18181b]">
-                  Daniel M., Pessac (33)
+                  Damien R., Pessac (33)
                 </div>
               </div>
 

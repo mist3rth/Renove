@@ -5,15 +5,15 @@ export const JsonLd: React.FC = () => {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': ['RoofingContractor', 'HomeAndConstructionBusiness'],
-    '@id': 'https://renove-toiture.fr/#organization',
+    '@id': 'https://renove.vercel.app/#organization',
     name: companyInfo.name,
-    legalName: `${companyInfo.name} SARL`,
-    description: "Artisan couvreur zingueur qualifié en Gironde : rénovation complète de toitures, réparation d'urgences, bâchage suite tempête et détection de fuites.",
-    url: 'https://renove-toiture.fr',
+    legalName: `${companyInfo.name} (Projet de Démonstration)`,
+    description: "Projet de démonstration portfolio artisan couvreur zingueur en Gironde : rénovation complète de toitures, réparations d'urgences, bâchage et détection de fuites.",
+    url: 'https://renove.vercel.app',
     telephone: `+33${companyInfo.phoneRaw.substring(1)}`,
     email: companyInfo.email,
-    image: 'https://renove-toiture.fr/hero-roof.webp',
-    logo: 'https://renove-toiture.fr/favicon.svg',
+    image: 'https://renove.vercel.app/hero-roof.webp',
+    logo: 'https://renove.vercel.app/favicon.svg',
     priceRange: '€€',
     address: {
       '@type': 'PostalAddress',
@@ -97,13 +97,13 @@ export const JsonLd: React.FC = () => {
         '@type': 'ListItem',
         position: 1,
         name: 'Accueil',
-        item: 'https://renove-toiture.fr/'
+        item: 'https://renove.vercel.app/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Devis Gratuit Toiture',
-        item: 'https://renove-toiture.fr/#contact'
+        item: 'https://renove.vercel.app/#contact'
       }
     ]
   };

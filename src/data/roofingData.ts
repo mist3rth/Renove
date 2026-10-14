@@ -13,8 +13,8 @@ export interface ServiceItem {
 export interface ReviewItem {
   id: string;
   name: string;
+  initials: string;
   location: string;
-  avatar: string;
   rating: number;
   content: string;
 }
@@ -50,6 +50,7 @@ export interface CompanyInfo {
   longitude: number;
   serviceRadiusKm: number;
   coveredCities: string[];
+  isDemoNotice: string;
 }
 
 export const companyInfo: CompanyInfo = {
@@ -60,15 +61,17 @@ export const companyInfo: CompanyInfo = {
   city: 'Mérignac',
   region: 'Nouvelle-Aquitaine',
   country: 'FR',
-  phone: '05 56 42 26 90',
-  phoneRaw: '0556422690',
-  emergencyPhone: '06 14 28 92 10',
-  emergencyPhoneRaw: '0614289210',
-  email: 'contact@renove-toiture.fr',
+  // Plage officielle ARCEP réservée aux œuvres de fiction : 05 36 49 XX XX
+  phone: '05 36 49 12 34',
+  phoneRaw: '0536491234',
+  // Plage mobile ARCEP fiction : 06 99 00 XX XX
+  emergencyPhone: '06 99 00 12 34',
+  emergencyPhoneRaw: '0699001234',
+  email: 'contact@renove-demo.fr',
   hours: 'Lun - Sam : 07h30 - 19h00 (Urgences fuites 24h/7j)',
   latitude: 44.8378,
   longitude: -0.6437,
-  serviceRadiusKm: 45,
+  serviceRadiusKm: 35,
   coveredCities: [
     'Mérignac',
     'Bordeaux',
@@ -83,9 +86,10 @@ export const companyInfo: CompanyInfo = {
     'Villenave-d\'Ornon',
     'Bruges',
     'Eysines',
-    'Libourne',
-    'Bassin d\'Arcachon'
-  ]
+    'Blanquefort',
+    'Cestas'
+  ],
+  isDemoNotice: 'Site de démonstration — Entreprise et données fictives'
 };
 
 export const servicesData: ServiceItem[] = [
@@ -175,34 +179,34 @@ export const processSteps: ProcessItem[] = [
 export const reviewsData: ReviewItem[] = [
   {
     id: '1',
-    name: 'Sarah Bennett',
+    name: 'Sophie M.',
+    initials: 'SM',
     location: 'Mérignac (33)',
     rating: 5,
-    avatar: '/avatar-sarah.webp',
-    content: "Après un épisode d'orage de grêle ayant endommagé notre toiture à Mérignac, Renove a tout géré - y compris le dossier d'assurance. Ils ont sécurisé la toiture dès le lendemain et le nettoyage était impeccable."
+    content: "Après un épisode d'orage de grêle ayant endommagé notre toiture à Mérignac, l'artisan a tout géré avec professionnalisme. Ils ont sécurisé la toiture dès le lendemain et le nettoyage était impeccable."
   },
   {
     id: '2',
-    name: 'Daniel M.',
+    name: 'Damien R.',
+    initials: 'DR',
     location: 'Pessac (33)',
     rating: 5,
-    avatar: '/avatar-daniel.webp',
-    content: "Deux entreprises m'assuraient qu'il fallait un remplacement complet très coûteux. L'artisan de Renove est venu et a diagnostiqué une fuite de solin : il nous a fait économiser plusieurs milliers d'euros grâce à une réparation ciblée et honnête."
+    content: "Deux entreprises m'assuraient qu'il fallait un remplacement complet très coûteux. L'artisan est venu et a diagnostiqué une fuite de solin : il nous a fait économiser plusieurs milliers d'euros grâce à une réparation ciblée et honnête."
   },
   {
     id: '3',
-    name: 'Lisa T.',
+    name: 'Laurence B.',
+    initials: 'LB',
     location: 'Bordeaux Caudéran (33)',
     rating: 5,
-    avatar: '/avatar-lisa.webp',
     content: "Une équipe ponctuelle, polie et très respectueuse des lieux. Le devis a été scrupuleusement respecté sans aucun surcoût imprévu. Je recommande vivement pour toute rénovation en Gironde."
   },
   {
     id: '4',
-    name: 'Andrew S.',
+    name: 'Stéphane G.',
+    initials: 'SG',
     location: 'Saint-Médard-en-Jalles (33)',
     rating: 5,
-    avatar: '/avatar-andrew.webp',
     content: "De l'inspection initiale gratuite jusqu'au nettoyage final à l'aimant pour les clous dans le jardin, tout a été mené de main de maître. Notre nouvelle toiture en tuiles romanes est superbe."
   }
 ];
@@ -226,11 +230,11 @@ export const faqData: FaqItem[] = [
   {
     id: '4',
     question: 'Quelle est votre zone d\'intervention en Gironde ?',
-    answer: "Nous intervenons dans un rayon de 45 km autour de Mérignac et Bordeaux : Mérignac, Pessac, Talence, Bègles, Gradignan, Le Bouscat, Saint-Médard, Bruges, Eysines, Libourne et jusqu'au Bassin d'Arcachon."
+    answer: "Nous intervenons dans un rayon de 35 km autour de Mérignac et de Bordeaux Métropole : Mérignac, Bordeaux, Pessac, Talence, Bègles, Gradignan, Le Bouscat, Saint-Médard-en-Jalles, Bruges, Eysines, Blanquefort, Cestas et communes voisines."
   },
   {
     id: '5',
     question: 'Quelles garanties protègent mes travaux de toiture ?',
-    answer: "Tous nos chantiers de rénovation et réfection sont couverts par notre Assurance Garantie Décennale et notre Responsabilité Civile Professionnelle. Vous bénéficiez d'une protection juridique et technique complète de 10 ans."
+    answer: "Tous nos chantiers de rénovation et réfection sont couverts par notre Assurance Garantie Décennale artisanale légale et notre Responsabilité Civile Professionnelle. Vous bénéficiez d'une protection juridique et technique complète de 10 ans."
   }
 ];

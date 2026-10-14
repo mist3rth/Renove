@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home as HomeIcon, Phone, Mail, MapPin } from 'lucide-react';
+import { Home as HomeIcon, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { companyInfo } from '../data/roofingData';
 
 interface FooterProps {
@@ -153,20 +153,34 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         </div>
 
-        {/* Bottom Copyright bar */}
-        <div className="mt-14 pt-8 border-t border-[#e4dfd7] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#71717a]">
-          <p>© 2026 {companyInfo.name}. Tous droits réservés. Gironde & Métropole Bordelaise.</p>
-          <div className="flex items-center gap-6">
+        {/* Bottom Copyright bar & Disclaimer */}
+        <div className="mt-14 pt-8 border-t border-[#e4dfd7] flex flex-col lg:flex-row items-center justify-between gap-4 text-xs text-[#71717a]">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+            <p>© 2026 {companyInfo.name}. Site de démonstration portfolio — Entreprise fictive (ARCEP).</p>
+            <span className="hidden sm:inline" aria-hidden="true">·</span>
+            <a
+              href="https://present-me-lake.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-semibold text-[#18181b] hover:text-[#c85a32] transition-colors group cursor-pointer"
+              aria-label="Made by T.THIESSON (ouvre dans un nouvel onglet)"
+            >
+              <span>Made by T.THIESSON</span>
+              <ExternalLink className="w-3.5 h-3.5 text-[#71717a] group-hover:text-[#c85a32] transition-colors" />
+            </a>
+          </div>
+
+          <div className="flex items-center gap-4 sm:gap-6">
             <button onClick={() => onNavigate('contact')} className="hover:text-[#18181b] transition-colors cursor-pointer">
               Demande de devis
             </button>
             <span aria-hidden="true">·</span>
-            <span className="hover:text-[#18181b] transition-colors cursor-pointer">
-              Mentions Légales & RGPD
+            <span className="hover:text-[#18181b] transition-colors">
+              Garantie Décennale Artisanale
             </span>
             <span aria-hidden="true">·</span>
-            <span className="hover:text-[#18181b] transition-colors cursor-pointer">
-              Garantie Décennale SMA BTP
+            <span className="hover:text-[#18181b] transition-colors">
+              Mérignac (33)
             </span>
           </div>
         </div>
