@@ -125,7 +125,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
           <div className="pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm font-medium text-neutral-200">
             <div className="flex items-center gap-2">
               <Star className="w-4 h-4 text-[#c85a32] fill-[#c85a32] shrink-0" />
-              <span>4.9 d'évaluation, +2 800 toits</span>
+              <span>4.9 d'évaluation, +850 toits</span>
             </div>
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-[#c85a32] shrink-0" />
