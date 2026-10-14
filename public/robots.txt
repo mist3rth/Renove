@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://renove-toiture.fr/sitemap.xml
+
+# LLM indexing context
+# See https://renove-toiture.fr/llms.txt for quick AI reasoning

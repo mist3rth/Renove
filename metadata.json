@@ -1,0 +1,6 @@
+{
+  "name": "Renove — Artisan Couvreur & Rénovation de Toiture",
+  "description": "Services complets de toiture, réparations d'urgence et réfections avec garantie de main-d'œuvre et devis gratuit.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
